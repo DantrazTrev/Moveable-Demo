@@ -70,8 +70,8 @@ const Canvas:React.FC<CanvasProps> = ({editMode}) => {
                 target.style.transform
                     = transform;
             }}
-            onRotateEnd={({ target, isDrag, clientX, clientY }) => {
-                const rotation = parseFloat(target.style.transform.replace('rotate(','').replace('deg)',''));
+            onRotateEnd={({ target, lastEvent, clientX, clientY }) => {
+                const rotation = lastEvent.rotation;
                 dispatch(updateSquare({id:targetId,square:{rotation}}))
 
             }}
