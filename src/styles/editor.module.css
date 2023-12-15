@@ -1,0 +1,23 @@
+.editor{
+    @apply absolute flex flex-col items-center justify-center bg-blue-50 w-screen space-y-5;
+    height: calc(100vh - 64px);
+
+}
+
+.colorRibbon{
+    @apply flex bg-white rounded-lg px-3 py-2 shadow-black;
+   
+}
+.canvas{
+    @apply  bg-white drop-shadow-md rounded shadow-black rounded-sm overflow-hidden;
+    height: 720px;
+    width: 480px;
+    
+}
+.moveable{
+    @apply relative w-full h-full;
+}
+
+.button{
+    @apply bg-yellow-300 hover:bg-yellow-700 text-black font-semibold py-2 px-4 rounded-full;
+}
