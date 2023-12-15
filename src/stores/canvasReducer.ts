@@ -57,8 +57,8 @@ const randomSquare = (): Square => {
         id: uuidv4(),
         x: Math.random() * 100,
         y: Math.random() * 100,
-        width: Math.random() * 100,
-        height: Math.random() * 100,
+        width:20 + Math.random() * 100 ,
+        height:20 +  Math.random() * 100,
         rotation: Math.random() * 360,
         color: `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`,
     };
