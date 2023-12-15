@@ -28,7 +28,7 @@ const Canvas:React.FC<CanvasProps> = ({editMode}) => {
 
      const handleOusideClick = (e:React.MouseEvent<HTMLDivElement, MouseEvent>)=>{
         //Check if click is outside of squares
-        if(!e.target.classList.contains('squares')){
+        if(!((e.target as HTMLElement).classList.contains('squares'))){
             setTargetId('');
             setTargets([]);
         }
@@ -40,6 +40,7 @@ const Canvas:React.FC<CanvasProps> = ({editMode}) => {
     return (
         <main className={styles.editor}>
             <div
+            className='flex px-4'
             style={{visibility:targetId!=''?'visible':'hidden'}}>
              <ColorRibbon
             onChange={updateColor}/>

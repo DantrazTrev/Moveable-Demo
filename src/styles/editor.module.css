@@ -5,13 +5,20 @@
 }
 
 .colorRibbon{
-    @apply flex bg-white rounded-lg px-3 py-2 shadow-black;
+    @apply flex flex-row flex-wrap bg-white rounded-lg px-3 py-2 shadow-black;
    
 }
 .canvas{
-    @apply  bg-white drop-shadow-md rounded shadow-black rounded-sm overflow-hidden;
-    height: 720px;
-    width: 480px;
+    @apply  bg-white drop-shadow-md rounded shadow-black rounded-sm overflow-hidden mx-4;
+        height: 720px;
+        width: 480px;
+
+    @media screen and (max-width: 768px) {
+        aspect-ratio: 9/16;
+        max-width: 95vw;
+        max-height: 80vh;
+        
+    }
     
 }
 .moveable{

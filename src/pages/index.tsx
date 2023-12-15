@@ -8,7 +8,9 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
   const [editMode, setEditMode] = useState(true);
   return (
-    <div className={inter.className}>
+    <div 
+    className={'h-screen w-screen '+ inter.className}
+    >
       <Navbar
         toggleEditor={() => setEditMode(!editMode)}
         editMode={editMode}

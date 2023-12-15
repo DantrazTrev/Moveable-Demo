@@ -35,7 +35,7 @@ const ColorRibbon: React.FC<ColorRibbonProps> = ({ onChange }) => {
                         borderRadius: '50%',
                         width: '20px',
                         height: '20px',
-                        margin: '0 5px',
+                        margin: '5px 5px',
                         display: 'inline-block',
                     }}
                 />

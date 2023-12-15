@@ -8,7 +8,7 @@ interface NavbarProps {
 
 const Navbar:React.FC<NavbarProps> = ({toggleEditor,editMode}) => {
     return (
-        <nav className="bg-gray-100 text-black h-14 flex flex-row justify-between items-center px-8">
+        <nav className="bg-gray-100 text-black h-14 w-screen flex flex-row justify-between items-center px-8">
             <ul className="flex justify-center space-x-4">
                 <li>Demo Dan</li>
             </ul>
