@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from '@/styles/editor.module.css';
 import { useAppDispatch, useAppSelector } from '@/stores/hooks';
-import { addSquare, updateSquare } from '@/stores/canvasReducer';
+import { addSquare, reset, updateSquare } from '@/stores/canvasReducer';
 import Squares from './Squares';
 import ColorRibbon from './ColorRibbon';
 import Moveable from 'react-moveable';
@@ -92,6 +92,9 @@ const Canvas:React.FC<CanvasProps> = ({editMode}) => {
             <button
             style={{visibility:editMode?'visible':'hidden'}}
             onClick={()=>{dispatch(addSquare())}} className={styles.button}>Add Square</button>
+             <button
+            style={{visibility:editMode?'visible':'hidden'}}
+            onClick={()=>{dispatch(reset())}} className={styles.clear}>Clear Canvas</button>
         </main>
     );
 };
